@@ -7,6 +7,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
+using ExpenseTracker.Models.DTOs;
+using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
 namespace ExpenseTracker.Controllers
 {
@@ -24,26 +26,47 @@ namespace ExpenseTracker.Controllers
         }
 
         [HttpPost("register")]
-        public IActionResult Register(User user)
+        public IActionResult Register([FromBody] RegisterDto registerDto)
         {
+            if (registerDto == null)
+                return BadRequest("Invalid user data.");
+
+            if (_context.Users.Any(u => u.Email == registerDto.Email))
+                return BadRequest("Email is already taken.");
+
+            var user = new User
+            {
+                Name = registerDto.Name,
+                Email = registerDto.Email,
+                Password = HashPassword(registerDto.Password)
+            };
+
             _context.Users.Add(user);
             _context.SaveChanges();
-            return Ok(user);
+            return Ok(new { message = "User registered successfully" });
         }
 
         [HttpPost("login")]
-        public IActionResult Login(User user)
+        public IActionResult Login([FromBody] LoginDto loginDto)
         {
-            var existingUser = _context.Users.FirstOrDefault(u => u.Email == user.Email && u.Password == user.Password);
-            if (existingUser == null) return Unauthorized();
+            if (loginDto == null)
+                return BadRequest("Invalid login data.");
 
-            var token = GenerateJwtToken(existingUser);
+            var user = _context.Users.FirstOrDefault(u => u.Email == loginDto.Email);
+            if (user == null || !VerifyPassword(loginDto.Password, user.Password))
+                return Unauthorized(new { message = "Invalid email or password." });
+
+            var token = GenerateJwtToken(user);
             return Ok(new { token });
         }
 
         private string GenerateJwtToken(User user)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var secretKey = _configuration["JWT:SecretKey"];
+            if (string.IsNullOrEmpty(secretKey))
+                throw new InvalidOperationException("JWT SecretKey is not configured.");
+
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
@@ -53,14 +76,30 @@ namespace ExpenseTracker.Controllers
             };
 
             var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
+                issuer: _configuration["JWT:ValidIssuer"],
+                audience: _configuration["JWT:ValidAudience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(30), // صلاحية التوكن
+                expires: DateTime.UtcNow.AddMinutes(20),
                 signingCredentials: credentials
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        private string HashPassword(string password)
+        {
+            byte[] salt = Encoding.UTF8.GetBytes("ThisIsASecureSalt");
+            return Convert.ToBase64String(KeyDerivation.Pbkdf2(
+                password: password,
+                salt: salt,
+                prf: KeyDerivationPrf.HMACSHA256,
+                iterationCount: 10000,
+                numBytesRequested: 32));
+        }
+
+        private bool VerifyPassword(string enteredPassword, string storedHashedPassword)
+        {
+            return HashPassword(enteredPassword) == storedHashedPassword;
         }
     }
 }

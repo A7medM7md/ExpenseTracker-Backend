@@ -1,6 +1,6 @@
 ﻿namespace ExpenseTracker.Dtos
 {
-    public class UpdateExpenseDto
+    public class CreateExpenseDto
     {
         public decimal Amount { get; set; }
         public string Currency { get; set; }

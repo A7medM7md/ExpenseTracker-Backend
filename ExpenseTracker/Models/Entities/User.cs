@@ -8,4 +8,5 @@
         public string Password { get; set; }
         public ICollection<Expense> Expenses { get; set; }
     }
+
 }

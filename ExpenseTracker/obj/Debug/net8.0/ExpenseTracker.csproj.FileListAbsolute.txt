@@ -136,3 +136,4 @@ D:\Training\ExpenseTracker\ExpenseTracker\obj\Debug\net8.0\ExpenseTracker.genrun
 D:\Training\ExpenseTracker\ExpenseTracker\obj\Debug\net8.0\ref\ExpenseTracker.dll
 D:\Training\ExpenseTracker\ExpenseTracker\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Training\ExpenseTracker\ExpenseTracker\bin\Debug\net8.0\BCrypt.Net.dll
+D:\Training\ExpenseTracker\ExpenseTracker\obj\Debug\net8.0\ExpenseTracker.sourcelink.json

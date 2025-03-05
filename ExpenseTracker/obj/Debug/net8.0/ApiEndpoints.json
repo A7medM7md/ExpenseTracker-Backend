@@ -8,8 +8,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "ExpenseTracker.Models.Entities.User",
+        "Name": "loginDto",
+        "Type": "ExpenseTracker.Models.DTOs.LoginDto",
         "IsRequired": true
       }
     ],
@@ -24,8 +24,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "ExpenseTracker.Models.Entities.User",
+        "Name": "registerDto",
+        "Type": "ExpenseTracker.Models.DTOs.RegisterDto",
         "IsRequired": true
       }
     ],
@@ -60,8 +60,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "expense",
-        "Type": "ExpenseTracker.Models.Entities.Expense",
+        "Name": "expenseDto",
+        "Type": "ExpenseTracker.Dtos.CreateExpenseDto",
         "IsRequired": true
       }
     ],
@@ -81,8 +81,8 @@
         "IsRequired": true
       },
       {
-        "Name": "expense",
-        "Type": "ExpenseTracker.Models.Entities.Expense",
+        "Name": "expenseDto",
+        "Type": "ExpenseTracker.Dtos.UpdateExpenseDto",
         "IsRequired": true
       }
     ],

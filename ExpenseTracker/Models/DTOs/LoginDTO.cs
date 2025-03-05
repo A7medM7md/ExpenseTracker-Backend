@@ -1,6 +1,6 @@
-﻿namespace ExpenseTracker.DTOs
+﻿namespace ExpenseTracker.Models.DTOs
 {
-    public class LoginDTO
+    public class LoginDto
     {
         public string Email { get; set; }
         public string Password { get; set; }
