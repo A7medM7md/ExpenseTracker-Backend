@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\controllers\\currencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\currencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,40 +67,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\appsettings.json",
-              "RelativeDocumentMoniker": "ExpenseTracker\\appsettings.json",
-              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\appsettings.json",
-              "RelativeToolTip": "ExpenseTracker\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-05T11:37:01.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "CurrencyController.cs",
               "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\CurrencyController.cs",
               "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\CurrencyController.cs",
               "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\CurrencyController.cs",
               "RelativeToolTip": "ExpenseTracker\\Controllers\\CurrencyController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAYwDYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T11:34:27.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ExpensesController.cs",
-              "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\ExpensesController.cs",
-              "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\ExpensesController.cs",
-              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\ExpensesController.cs",
-              "RelativeToolTip": "ExpenseTracker\\Controllers\\ExpensesController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwEEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T20:24:06.766Z",
               "EditorCaption": ""
             },
             {
@@ -109,11 +83,37 @@
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Program.cs",
               "RelativeDocumentMoniker": "ExpenseTracker\\Program.cs",
-              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Program.cs*",
-              "RelativeToolTip": "ExpenseTracker\\Program.cs*",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwE0AAAAaAAAAAAAAAA==",
+              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Program.cs",
+              "RelativeToolTip": "ExpenseTracker\\Program.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAowEcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T19:38:47.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\appsettings.json",
+              "RelativeDocumentMoniker": "ExpenseTracker\\appsettings.json",
+              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\appsettings.json",
+              "RelativeToolTip": "ExpenseTracker\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-05T11:37:01.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExpensesController.cs",
+              "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\ExpensesController.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\ExpensesController.cs",
+              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\ExpensesController.cs",
+              "RelativeToolTip": "ExpenseTracker\\Controllers\\ExpensesController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwAoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T20:24:06.766Z",
               "EditorCaption": ""
             },
             {

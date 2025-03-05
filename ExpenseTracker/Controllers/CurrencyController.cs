@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System.Net.Http;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace ExpenseTracker.Controllers
@@ -12,9 +14,9 @@ namespace ExpenseTracker.Controllers
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _configuration;
 
-        public CurrencyController(HttpClient httpClient, IConfiguration configuration)
+        public CurrencyController(IHttpClientFactory httpClientFactory, IConfiguration configuration)
         {
-            _httpClient = httpClient;
+            _httpClient = httpClientFactory.CreateClient();
             _configuration = configuration;
         }
 
@@ -26,7 +28,7 @@ namespace ExpenseTracker.Controllers
                 var apiKey = _configuration["ExchangeRateApiKey"];
                 if (string.IsNullOrEmpty(apiKey))
                 {
-                    return BadRequest("API key is missing. Please configure it in appsettings.json");
+                    return Unauthorized("Invalid API Key. Please check your configuration.");
                 }
 
                 var url = $"https://v6.exchangerate-api.com/v6/{apiKey}/latest/EGP";
@@ -38,7 +40,8 @@ namespace ExpenseTracker.Controllers
                 }
 
                 var content = await response.Content.ReadAsStringAsync();
-                return Ok(content);
+                var exchangeRates = JsonSerializer.Deserialize<ExchangeRateResponse>(content);
+                return Ok(exchangeRates);
             }
             catch (HttpRequestException ex)
             {
@@ -49,5 +52,14 @@ namespace ExpenseTracker.Controllers
                 return StatusCode(500, $"An unexpected error occurred: {ex.Message}");
             }
         }
+    }
+
+    public class ExchangeRateResponse
+    {
+        [JsonPropertyName("base_code")]
+        public string BaseCode { get; set; }
+
+        [JsonPropertyName("conversion_rates")]
+        public Dictionary<string, decimal> ConversionRates { get; set; }
     }
 }
