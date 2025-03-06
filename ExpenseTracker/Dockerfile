@@ -4,10 +4,12 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["ExpenseTracker.csproj", "./"]
-RUN dotnet restore "./ExpenseTracker.csproj"
-COPY . .
-RUN dotnet publish -c Release -o /app/publish
+
+COPY . . 
+
+RUN dotnet restore "ExpenseTracker/ExpenseTracker.csproj"
+
+RUN dotnet publish "ExpenseTracker/ExpenseTracker.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
