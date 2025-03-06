@@ -10,12 +10,25 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddHttpClient();
 
+// езого CORS чхА builder.Build()
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReact", builder =>
+    {
+        builder.WithOrigins("http://localhost:3000")
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
+// езого DbContext Аэ SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
+// езого Swagger
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo { Title = "ExpenseTracker API", Version = "v1" });
@@ -27,7 +40,7 @@ builder.Services.AddSwaggerGen(options =>
         Scheme = "Bearer",
         BearerFormat = "JWT",
         In = ParameterLocation.Header,
-        Description = "Use : Bearer <JWT Token>"
+        Description = "Use: Bearer <JWT Token>"
     });
 
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -42,6 +55,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+// езого JWT Authentication
 var key = builder.Configuration["JWT:SecretKey"];
 if (string.IsNullOrEmpty(key) || key.Length < 32)
 {
@@ -73,6 +87,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowReact"); // гсйногЦ CORS хзо Build
 app.UseAuthentication();
 app.UseAuthorization();
 

@@ -3,36 +3,40 @@
   "WorkspaceRootPath": "D:\\Training\\ExpenseTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\controllers\\currencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\currencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\models\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\models\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\models\\entities\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\entities\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\controllers\\currencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\controllers\\currencycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\models\\entities\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|solutionrelative:expensetracker\\models\\entities\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C17BF245-1F5E-4A87-860B-78A65F69CDD0}|ExpenseTracker\\ExpenseTracker.csproj|d:\\training\\expensetracker\\expensetracker\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -76,14 +80,13 @@
               "RelativeDocumentMoniker": "ExpenseTracker\\Models\\DTOs\\LoginDTO.cs",
               "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Models\\DTOs\\LoginDTO.cs",
               "RelativeToolTip": "ExpenseTracker\\Models\\DTOs\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T12:56:53.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T12:56:53.953Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "CurrencyController.cs",
               "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\CurrencyController.cs",
               "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\CurrencyController.cs",
@@ -91,38 +94,73 @@
               "RelativeToolTip": "ExpenseTracker\\Controllers\\CurrencyController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAzwBYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T11:34:27.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T11:34:27.047Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Program.cs",
               "RelativeDocumentMoniker": "ExpenseTracker\\Program.cs",
               "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Program.cs",
               "RelativeToolTip": "ExpenseTracker\\Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAIwFIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T19:38:47.164Z",
+              "WhenOpened": "2025-03-04T19:38:47.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\AuthController.cs*",
+              "RelativeToolTip": "ExpenseTracker\\Controllers\\AuthController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T22:10:24.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Models\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\Entities\\User.cs",
+              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Models\\Entities\\User.cs",
+              "RelativeToolTip": "ExpenseTracker\\Models\\Entities\\User.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T19:53:10.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Models\\DTOs\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\DTOs\\RegisterDTO.cs",
+              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Models\\DTOs\\RegisterDTO.cs",
+              "RelativeToolTip": "ExpenseTracker\\Models\\DTOs\\RegisterDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T00:29:05.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\appsettings.json",
               "RelativeDocumentMoniker": "ExpenseTracker\\appsettings.json",
               "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\appsettings.json",
               "RelativeToolTip": "ExpenseTracker\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-05T11:37:01.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T17:12:22.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "ExpensesController.cs",
               "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\ExpensesController.cs",
               "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\ExpensesController.cs",
@@ -130,25 +168,11 @@
               "RelativeToolTip": "ExpenseTracker\\Controllers\\ExpensesController.cs",
               "ViewState": "AgIAAGoAAAAAAAAAAAAkwG8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T20:24:06.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T20:24:06.766Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Models\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "ExpenseTracker\\Models\\Entities\\User.cs",
-              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Models\\Entities\\User.cs",
-              "RelativeToolTip": "ExpenseTracker\\Models\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T19:53:10.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "ExpenseTracker\\Data\\ApplicationDbContext.cs",
@@ -156,25 +180,11 @@
               "RelativeToolTip": "ExpenseTracker\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T10:49:48.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T10:49:48.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "ExpenseTracker\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "ExpenseTracker\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAgwEcAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T22:10:24.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Expense.cs",
               "DocumentMoniker": "D:\\Training\\ExpenseTracker\\ExpenseTracker\\Models\\Entities\\Expense.cs",
               "RelativeDocumentMoniker": "ExpenseTracker\\Models\\Entities\\Expense.cs",
@@ -182,8 +192,7 @@
               "RelativeToolTip": "ExpenseTracker\\Models\\Entities\\Expense.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T19:53:53.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T19:53:53.343Z"
             }
           ]
         }

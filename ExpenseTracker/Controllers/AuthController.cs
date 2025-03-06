@@ -9,6 +9,7 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.Extensions.Configuration;
 using ExpenseTracker.Models.DTOs;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using System.Security.Cryptography;
 
 namespace ExpenseTracker.Controllers
 {
@@ -34,11 +35,22 @@ namespace ExpenseTracker.Controllers
             if (_context.Users.Any(u => u.Email == registerDto.Email))
                 return BadRequest("Email is already taken.");
 
+            // إنشاء Salt عشوائي
+            byte[] salt = new byte[16];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(salt);
+            }
+
+            // Hash الباسوورد مع الـ Salt
+            string hashedPassword = HashPassword(registerDto.Password, salt);
+
             var user = new User
             {
                 Name = registerDto.Name,
                 Email = registerDto.Email,
-                Password = HashPassword(registerDto.Password)
+                Password = hashedPassword,
+                PasswordSalt = Convert.ToBase64String(salt) // تخزين الـ Salt
             };
 
             _context.Users.Add(user);
@@ -53,11 +65,11 @@ namespace ExpenseTracker.Controllers
                 return BadRequest("Invalid login data.");
 
             var user = _context.Users.FirstOrDefault(u => u.Email == loginDto.Email);
-            if (user == null || !VerifyPassword(loginDto.Password, user.Password))
+            if (user == null || !VerifyPassword(loginDto.Password, user.Password, user.PasswordSalt))
                 return Unauthorized(new { message = "Invalid email or password." });
 
             var token = GenerateJwtToken(user);
-            return Ok(new { token });
+            return Ok(new { token, userId = user.Id }); // إضافة userId في الـ Response
         }
 
         private string GenerateJwtToken(User user)
@@ -86,9 +98,8 @@ namespace ExpenseTracker.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        private string HashPassword(string password)
+        private string HashPassword(string password, byte[] salt)
         {
-            byte[] salt = Encoding.UTF8.GetBytes("ThisIsASecureSalt");
             return Convert.ToBase64String(KeyDerivation.Pbkdf2(
                 password: password,
                 salt: salt,
@@ -97,9 +108,14 @@ namespace ExpenseTracker.Controllers
                 numBytesRequested: 32));
         }
 
-        private bool VerifyPassword(string enteredPassword, string storedHashedPassword)
+        private bool VerifyPassword(string enteredPassword, string storedHashedPassword, string storedSalt)
         {
-            return HashPassword(enteredPassword) == storedHashedPassword;
+            if (string.IsNullOrEmpty(storedSalt))
+                return false;
+
+            byte[] salt = Convert.FromBase64String(storedSalt);
+            string hashedEnteredPassword = HashPassword(enteredPassword, salt);
+            return hashedEnteredPassword == storedHashedPassword;
         }
     }
 }
