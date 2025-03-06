@@ -7,6 +7,18 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
+
+
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.UseUrls($"http://*:{port}");
+
+builder.Services.AddHealthChecks();
+
+
+
+
 // Add services to the container.
 builder.Services.AddHttpClient();
 
@@ -86,11 +98,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+app.UseHealthChecks("/health");
+
+
 app.UseHttpsRedirection();
 app.UseCors("AllowReact"); // «” Œœ«„ CORS »⁄œ Build
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
 
 app.Run();

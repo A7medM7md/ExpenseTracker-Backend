@@ -1,0 +1,8 @@
+﻿[build]
+builder = "dockerfile"
+dockerfilePath = "./ExpenseTracker/Dockerfile"
+
+[deploy]
+startCommand = "./ExpenseTracker"
+restartPolicyType = "always"
+healthcheckPath = "/health"
