@@ -35,22 +35,24 @@ namespace ExpenseTracker.Controllers
             if (_context.Users.Any(u => u.Email == registerDto.Email))
                 return BadRequest("Email is already taken.");
 
-            // إنشاء Salt عشوائي
             byte[] salt = new byte[16];
             using (var rng = RandomNumberGenerator.Create())
             {
                 rng.GetBytes(salt);
             }
 
-            // Hash الباسوورد مع الـ Salt
             string hashedPassword = HashPassword(registerDto.Password, salt);
+
+            string refreshToken = GenerateRefreshToken();
 
             var user = new User
             {
                 Name = registerDto.Name,
                 Email = registerDto.Email,
                 Password = hashedPassword,
-                PasswordSalt = Convert.ToBase64String(salt) // تخزين الـ Salt
+                PasswordSalt = Convert.ToBase64String(salt),
+                RefreshToken = refreshToken,
+                RefreshTokenExpiry = DateTime.UtcNow.AddDays(double.Parse(_configuration["JWT:RefreshTokenExpirationInDays"])) // تعيين تاريخ الانتهاء
             };
 
             _context.Users.Add(user);
@@ -68,8 +70,34 @@ namespace ExpenseTracker.Controllers
             if (user == null || !VerifyPassword(loginDto.Password, user.Password, user.PasswordSalt))
                 return Unauthorized(new { message = "Invalid email or password." });
 
-            var token = GenerateJwtToken(user);
-            return Ok(new { token, userId = user.Id }); // إضافة userId في الـ Response
+            var accessToken = GenerateJwtToken(user);
+            var refreshToken = GenerateRefreshToken();
+
+            user.RefreshToken = refreshToken;
+            user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(double.Parse(_configuration["JWT:RefreshTokenExpirationInDays"]));
+            _context.SaveChanges();
+
+            return Ok(new { token = accessToken, refreshToken, userId = user.Id });
+        }
+
+        [HttpPost("refresh-token")]
+        public IActionResult RefreshToken([FromBody] RefreshTokenDto refreshTokenDto)
+        {
+            if (refreshTokenDto == null || string.IsNullOrEmpty(refreshTokenDto.RefreshToken))
+                return BadRequest("Invalid refresh token data.");
+
+            var user = _context.Users.FirstOrDefault(u => u.RefreshToken == refreshTokenDto.RefreshToken);
+            if (user == null || user.RefreshTokenExpiry < DateTime.UtcNow)
+                return Unauthorized(new { message = "Invalid or expired refresh token." });
+
+            var newAccessToken = GenerateJwtToken(user);
+            var newRefreshToken = GenerateRefreshToken();
+
+            user.RefreshToken = newRefreshToken;
+            user.RefreshTokenExpiry = DateTime.UtcNow.AddDays(double.Parse(_configuration["JWT:RefreshTokenExpirationInDays"]));
+            _context.SaveChanges();
+
+            return Ok(new { token = newAccessToken, refreshToken = newRefreshToken });
         }
 
         private string GenerateJwtToken(User user)
@@ -91,11 +119,21 @@ namespace ExpenseTracker.Controllers
                 issuer: _configuration["JWT:ValidIssuer"],
                 audience: _configuration["JWT:ValidAudience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(20),
+                expires: DateTime.UtcNow.AddMinutes(double.Parse(_configuration["JWT:DurationInMinutes"])),
                 signingCredentials: credentials
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        private string GenerateRefreshToken()
+        {
+            var randomNumber = new byte[32];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(randomNumber);
+                return Convert.ToBase64String(randomNumber);
+            }
         }
 
         private string HashPassword(string password, byte[] salt)
@@ -117,5 +155,10 @@ namespace ExpenseTracker.Controllers
             string hashedEnteredPassword = HashPassword(enteredPassword, salt);
             return hashedEnteredPassword == storedHashedPassword;
         }
+    }
+
+    public class RefreshTokenDto
+    {
+        public string RefreshToken { get; set; }
     }
 }

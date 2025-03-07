@@ -11,10 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
-builder.WebHost.UseUrls($"http://*:{port}");
+//var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+//builder.WebHost.UseUrls($"http://*:{port}");
 
-builder.Services.AddHealthChecks();
+//builder.Services.AddHealthChecks();
 
 
 
@@ -99,7 +99,7 @@ if (app.Environment.IsDevelopment())
 }
 
 
-app.UseHealthChecks("/health");
+//app.UseHealthChecks("/health");
 
 
 app.UseHttpsRedirection();
