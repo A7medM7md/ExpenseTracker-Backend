@@ -7,22 +7,18 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-
-
-
+#region For Railway
 //var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 //builder.WebHost.UseUrls($"http://*:{port}");
 
-//builder.Services.AddHealthChecks();
-
-
-
+//builder.Services.AddHealthChecks(); 
+#endregion
 
 // Add services to the container.
+
+
 builder.Services.AddHttpClient();
 
-// езого CORS чхА builder.Build()
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReact", builder =>
@@ -33,14 +29,13 @@ builder.Services.AddCors(options =>
     });
 });
 
-// езого DbContext Аэ SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-// езого Swagger
+// Swagger
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo { Title = "ExpenseTracker API", Version = "v1" });
@@ -67,7 +62,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-// езого JWT Authentication
+// JWT Authentication
 var key = builder.Configuration["JWT:SecretKey"];
 if (string.IsNullOrEmpty(key) || key.Length < 32)
 {
@@ -103,7 +98,7 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseHttpsRedirection();
-app.UseCors("AllowReact"); // гсйногЦ CORS хзо Build
+app.UseCors("AllowReact");
 app.UseAuthentication();
 app.UseAuthorization();
 

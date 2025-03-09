@@ -52,7 +52,7 @@ namespace ExpenseTracker.Controllers
                 Password = hashedPassword,
                 PasswordSalt = Convert.ToBase64String(salt),
                 RefreshToken = refreshToken,
-                RefreshTokenExpiry = DateTime.UtcNow.AddDays(double.Parse(_configuration["JWT:RefreshTokenExpirationInDays"])) // تعيين تاريخ الانتهاء
+                RefreshTokenExpiry = DateTime.UtcNow.AddDays(double.Parse(_configuration["JWT:RefreshTokenExpirationInDays"]))
             };
 
             _context.Users.Add(user);
