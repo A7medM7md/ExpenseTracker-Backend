@@ -1,5 +1,5 @@
 Expense Tracker - .NET Back-End
-A robust RESTful API built with .NET Core to serve as the back-end for an expense tracking web application. This API handles CRUD operations for managing expense data and provides a reliable data layer for the React front-end of the Expense Tracker project. Designed with clean architecture principles, it ensures scalability and maintainability for personal finance management.
+A robust RESTful API built with .NET Core to serve as the back-end for an expense tracking web application. This API handles CRUD operations for managing expense data and provides a reliable data layer for the React front-end of the Expense Tracker project. It ensures scalability and maintainability for personal finance management.
 
 Key Features:
 - RESTful endpoints for creating, reading, updating, and deleting expense records
