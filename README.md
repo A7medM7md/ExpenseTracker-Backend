@@ -22,7 +22,7 @@ It ensures **scalability**, **security**, and **maintainability** for personal f
 - Swagger (Swashbuckle)
 
 # 🔗 Front-End Integration
-- This back-end is fully integrated with the React front-end located here: 👉 [Expense Tracker - Front-End (React)](https://github.com/A7medM7med/ExpenseTracker-Frontend)
+- This back-end is fully integrated with the React front-end located here: 👉 [Expense Tracker - Front-End (React)](https://github.com/A7medM7md/ExpenseTracker-Frontend)
 
 # 📬 Feedback & Contributions
 - Feel free to open issues or submit pull requests for improvements or feature requests.
